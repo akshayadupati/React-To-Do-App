@@ -1,0 +1,15 @@
+/* Used image from - https://unsplash.com/photos/erJIK6HLBCw */
+
+.bg-main {
+  background: url(https://images.unsplash.com/photo-1605444846256-8b82728af333?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+  background-size: "cover";
+}
+
+.task-item {
+  text-align: left!important;
+  font-weight: bold;
+}
+
+.total-task {
+    font-size: 2em!important;
+}
