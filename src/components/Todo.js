@@ -39,11 +39,11 @@ const Todo = () => {
     setTask(e.target.value);
   };
   return (
-    <div className="container row">
+    <div className="container row justify-content-center">
       <h1 className="mt-3 mb-3 text-white text-center header-text">
         To-Do App
       </h1>
-      <div className="col-8">
+      <div className="col-6">
         <input
           name="task"
           type="text"
@@ -53,9 +53,9 @@ const Todo = () => {
           onChange={(e) => handleChange(e)}
         />
       </div>
-      <div className="col-4">
+      <div className="col-1">
         <button
-          className="btn btn-primary form-control material-icons"
+          className="btn btn-color form-control material-icons"
           onClick={addTask}
         >
           add
@@ -72,25 +72,27 @@ const Todo = () => {
 
       {tasks.map((task) => (
         <React.Fragment key={task.id}>
-          <div className="col-11">
-            <span className="form-control bg-white btn mt-2 task-item">
-              {task.title}
-            </span>
-          </div>
-          <div className="col-1 mt-1">
-            <button
-              className="mt-2 btn-warning material-icons"
-              onClick={() => deleteTask(task)}
-            >
-              delete
-            </button>
+          <div className="row justify-content-center">
+            <div className="col-6">
+              <span className="form-control bg-white btn mt-2 task-item">
+                {task.title}
+              </span>
+            </div>
+            <div className="col-1 mt-1">
+              <button
+                className="mt-2 delete-btn material-icons"
+                onClick={() => deleteTask(task)}
+              >
+                delete
+              </button>
+            </div>
           </div>
         </React.Fragment>
       ))}
       {tasks.length > 0 ? (
         <div className="text-center">
           <button
-            className="btn btn-secondary mt-4 mb-4 text-uppercase text-bold bg-warning"
+            className="btn clear-btn mt-4 mb-4 text-uppercase text-bold"
             onClick={() => {
               handleClear();
             }}
